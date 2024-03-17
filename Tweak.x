@@ -6,7 +6,7 @@
 - (NSData *)elementData {
     NSString *description = [self description];
     if ([description containsString:@"shorts_shelf.eml"] || [description containsString:@"#shorts"] || [description containsString:@"shorts_video_cell.eml"] || [description containsString:@"6Shorts"]) {
-        if (![description containsString:@"history*"]) {
+        if (![description containsString:@"history*"] || ![description containsString:@"subscriptions*"]) {
             return nil;
         }
     }
